@@ -20,7 +20,7 @@ class Student
 
   def save
     sql = <<-SQL
-      
+
     SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
