@@ -10,4 +10,8 @@ class Student
     @id, @name, @grade = id, name, grade
   end
 
+  def self.create_table()
+
+  end
+
 end
