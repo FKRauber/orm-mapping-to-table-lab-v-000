@@ -10,11 +10,21 @@ class Student
     @id, @name, @grade = id, name, grade
   end
 
-  def self.create_table()
+  def self.create_table
+    sql = <<-SQL
+      CREATE TABLE IF NOT EXISTS students(
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        grade TEXT
+      )
+    SQL
 
   end
 
   def self.drop_table
+    sql = <<-SQL
+
+    SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
   end
